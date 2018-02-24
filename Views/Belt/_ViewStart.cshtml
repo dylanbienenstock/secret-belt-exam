@@ -1,0 +1,22 @@
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="navbar-container">
+    <div id="navbar"> 
+        <!-- Really sorry for using a bunch of inline styling here. I was running out of time! -->
+        <h1 style="display: inline-block">Dojo Activity Center</h1>
+        <span style="float: right; vertical-align: top; padding-top: 32px; padding-right: 32px;">
+            @if (ViewBag.UserFirstName != null)
+            {
+                <span style="margin-right: 32px;">Welcome, @ViewBag.UserFirstName</span>
+            }
+            else
+            {
+                <a style="margin-right: 32px;" asp-controller="Belt" asp-action="Home">Home</a>
+            }
+
+            <a asp-controller="Account" asp-action="LogOut">Log out</a>
+        </span>
+    </div>
+</div>

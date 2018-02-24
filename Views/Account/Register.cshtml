@@ -1,0 +1,73 @@
+@{
+	ViewBag.Title = "Register";
+}
+
+<div class="form-box">
+	<h1 class="form-title">Register</h1>
+
+	<div class="form-content">
+		@model BeltExam.Models.RegisterViewModel
+		<form asp-controller="Account" asp-action="RegisterSubmit" method="POST">
+			@Html.AntiForgeryToken()
+
+			<div class="form-wrapper">
+				<table cellpadding="8" class="form-table">
+					<tr>
+						<td class="form-label">
+							<label asp-for="FirstName"></label>
+						</td>
+						<td>
+							<input asp-for="FirstName">
+						</td>
+					</tr>
+					<tr>
+						<td class="form-label">
+							<label asp-for="LastName"></label>
+						</td>
+						<td>
+							<input asp-for="LastName">
+						</td>
+					</tr>
+					<tr>
+						<td class="form-label">
+							<label asp-for="EmailAddress"></label>
+						</td>
+						<td>
+							<input asp-for="EmailAddress">
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="8" class="form-table">
+					<tr>
+						<td class="form-label">
+							<label asp-for="Password"></label>
+						</td>
+						<td>
+							<input type="password" asp-for="Password">
+						</td>
+					</tr>
+					<tr>
+						<td class="form-label">
+							<label asp-for="PasswordConfirmation"></label>
+						</td>
+						<td>
+							<input type="password" asp-for="PasswordConfirmation">
+						</td>
+					</tr>
+				</table>
+
+				<div class="right-submit">					
+					<input type="submit">
+				</div>
+			</div>
+		</form>
+	</
+
+	@if (ViewBag.RegisterErrors != null)
+	{
+		@foreach (string error in ViewBag.RegisterErrors)
+		{
+			<span class="form-error">@error</span> <br>
+		}
+	}
+</div>

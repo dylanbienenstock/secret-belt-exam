@@ -1,0 +1,16 @@
+@{
+	ViewBag.Title = "Time Conflict";
+}
+
+@section head {
+    <script>
+        setTimeout(function() {
+            document.location.href = "/Home";
+        }, 3000);
+    </script>
+}
+
+<div id="content">
+    <h1>Can't join, time conflict!</h1>
+    <h3><a asp-controller="Belt" asp-action="Home">Redirecting...</a></h3>
+</div>

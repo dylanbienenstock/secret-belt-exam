@@ -1,0 +1,82 @@
+@{
+	ViewBag.Title = "New Activity";
+}
+
+<div id="content">
+	<div class="form-box">
+		<h1 class="form-title">Create an Activity!</h1>
+
+		<div class="form-content">
+			@model BeltExam.Models.ActivityViewModel
+			<form asp-controller="Belt" asp-action="NewActivitySubmit" method="POST">
+				@Html.AntiForgeryToken()
+
+				<table cellpadding="8" class="form-table">
+					<tr>
+						<td class="form-label">
+							<label asp-for="Title"></label>
+						</td>
+						<td>
+							<input asp-for="Title">
+						</td>
+					</tr>
+					<tr>
+						<td class="form-label">
+							<label asp-for="Date"></label>
+						</td>
+						<td>
+							<input asp-for="Date">
+						</td>
+					</tr>
+				</table>
+				<table cellpadding="8" class="form-table">
+					<tr>
+						<td class="form-label">
+							<label asp-for="Time"></label>
+						</td>
+						<td>
+							<input asp-for="Time">
+						</td>
+					</tr>
+					<tr>
+						<td class="form-label">
+							<label asp-for="Duration"></label>
+						</td>
+						<td>
+							<input asp-for="Duration">
+							<select asp-for="DurationUnits">
+								<option>Days</option>
+								<option>Hours</option>
+								<option>Minutes</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+
+				<table cellpadding="8">
+					<tr>
+						<td>
+							<div class="form-wrapper" id="new-activity-description">			
+								<label asp-for="Description"></label>&nbsp;&nbsp;&nbsp;
+								<textarea asp-for="Description" rows="8" cols="57"></textarea>
+								<!-- 57 cols lines up perfectly -->
+
+								<div class="right-submit">					
+									<input type="submit" value="Create Activity">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+		@if (ViewBag.NewActivityErrors != null)
+		{
+			@foreach (string error in ViewBag.NewActivityErrors)
+			{
+				<span class="form-error">@error</span> <br>
+			}
+		}
+	</div>
+</div>

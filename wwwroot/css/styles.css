@@ -1,0 +1,81 @@
+#navbar-container {
+	padding: 0 28px 0 28px;
+	margin-bottom: 48px;
+}
+
+#navbar {
+	border-bottom: 2px solid black;
+	padding-left: 32px;
+}
+
+#content {
+	padding-left: calc(28px + 32px);
+	padding-right: calc(28px + 32px);
+}
+
+.form-box {
+	margin-bottom: 20px;
+}
+
+.form-title {
+	/* margin-left: 32px; */
+}
+
+.form-content {
+	margin-left: 20px;
+}
+
+.form-error {
+	font-style: italic;	
+	color: darkred;
+}
+
+.form-table {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#login-error {
+	display: block;
+	margin: 16px, 0, 8px 0;
+}
+
+.center-title {
+	text-align: center;
+}
+
+.right-submit {
+	text-align: right;
+	margin-top: 16px;
+	margin-right: 28px;
+}
+
+.form-wrapper {
+	display: inline-block;
+}
+
+label {
+	vertical-align: top;
+}
+
+#new-activity-description {
+	margin-top: 8px;
+}
+
+#activity-title {
+	display: inline;
+}
+
+#activity-join-button {
+	float: right;
+	padding: 8px 12px 8px 12px;
+	font-size: 20px;
+}
+
+.indented {
+	margin-left: 32px;
+}
+
+#activity-content > h3 {
+	margin-top: 40px;
+}

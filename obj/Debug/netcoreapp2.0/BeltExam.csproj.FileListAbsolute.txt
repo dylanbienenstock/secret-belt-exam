@@ -1,0 +1,10 @@
+/home/dylan/Projects/CS/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.deps.json
+/home/dylan/Projects/CS/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.runtimeconfig.json
+/home/dylan/Projects/CS/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.runtimeconfig.dev.json
+/home/dylan/Projects/CS/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.dll
+/home/dylan/Projects/CS/BeltExam/bin/Debug/netcoreapp2.0/BeltExam.pdb
+/home/dylan/Projects/CS/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.csproj.CoreCompileInputs.cache
+/home/dylan/Projects/CS/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.AssemblyInfoInputs.cache
+/home/dylan/Projects/CS/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.AssemblyInfo.cs
+/home/dylan/Projects/CS/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.dll
+/home/dylan/Projects/CS/BeltExam/obj/Debug/netcoreapp2.0/BeltExam.pdb

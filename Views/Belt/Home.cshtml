@@ -1,0 +1,58 @@
+@{
+	ViewBag.Title = "Home";
+}
+
+@section head {
+    <link rel="stylesheet" href="~/css/table.css">
+}
+
+<div id="content">
+    <div>
+        <div id="table-container">
+            <table cellpadding="8">
+                <tr>
+                    <th>Activity</th>
+                    <th>Date and Time</th>
+                    <th>Duration</th>
+                    <th>Event Coordinator</th>
+                    <th>Number of Participants</th>
+                    <th>Actions</th>
+                </tr>
+
+                @foreach (var Activity in ViewBag.Activities)
+                {
+                    <tr>
+                        <td>
+                            <a asp-controller="Belt" asp-action="ViewActivity" asp-route-id="@Activity.ActivityId">
+                                @Activity.Title
+                            </a>
+                        </td>
+                        <td>
+                            @(Activity.DateTime.ToString("MM/dd @ HH:mm t") + "M")
+                        </td>
+                        <td>
+                            @Activity.Duration @Activity.DurationUnits.ToLower()
+                        </td>
+                        <td>
+                            @ViewBag.ActivityCoordinators[Activity.ActivityId]
+                        </td>             
+                        <td>
+                            @ViewBag.ActivityParticipantCounts[Activity.ActivityId]
+                        </td>
+                        <td>
+                            <a asp-controller="Belt"
+                            asp-action="@ViewBag.ActivityActions[Activity.ActivityId].Item1" 
+                            asp-route-id="@Activity.ActivityId">
+                                @ViewBag.ActivityActions[Activity.ActivityId].Item2                  
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </table>
+
+            <div class="right-submit">					
+                <button onclick="document.location.href='/New'">Add new activity!</button>
+            </div>
+        </div>
+    </div>
+</div>

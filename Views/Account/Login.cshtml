@@ -1,0 +1,37 @@
+<div class="form-box">
+	<h1 class="form-title">Log in</h1>
+
+	<div class="form-content">
+		@model BeltExam.Models.LoginViewModel
+		<form asp-controller="Account" asp-action="LoginSubmit" method="POST">
+			@Html.AntiForgeryToken()
+
+			<div class="form-wrapper">
+				<table cellpadding="8">
+					<tr>
+						<td class="form-label">
+							<label asp-for="LoginEmailAddress"></label>
+						</td>
+						<td>
+							<input asp-for="LoginEmailAddress">
+						</td>
+					</tr>
+					<tr>
+						<td class="form-label">
+							<label asp-for="LoginPassword"></label>
+						</td>
+						<td>
+							<input type="password" asp-for="LoginPassword">
+						</td>
+					</tr>
+				</table>
+			</form>
+
+			<div class="right-submit">					
+				<input type="submit">
+			</div>
+
+			<span class="form-error" id="login-error">@ViewBag.LoginError</span>
+		</div>
+	</div>
+</div>

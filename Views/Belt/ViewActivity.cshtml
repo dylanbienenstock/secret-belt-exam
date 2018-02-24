@@ -1,0 +1,28 @@
+@{
+	ViewBag.Title = "Activity";
+}
+
+<div id="content">
+    <h1 id="activity-title">@ViewBag.Activity.Title</h1>
+    <button id="activity-join-button" onclick="document.location.href='@(ViewBag.ButtonAction)'">
+        @ViewBag.ButtonText
+    </button>
+
+    <div id="activity-content" class="indented">
+        <h3>Event coordinator: @ViewBag.ActivityCoordinator</h3>
+        <h3>Description</h3>
+
+        <div class="indented">
+            <p>@ViewBag.Activity.Description</p>
+        </div>
+
+        <h3>Participants</h3>
+        
+        <div class="indented">
+            @foreach (string participant in ViewBag.Participants)
+            {
+                <p>@participant</p>
+            }
+        </div>
+    </div>
+</div>
